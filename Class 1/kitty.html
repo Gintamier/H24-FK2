@@ -52,35 +52,59 @@
             Hahaha... kitty go meow
           </p>
         </div>
-          
+
+      </div>
     </div>
   </section>
-</body>
 
-<script>
-  let btn = document.querySelector('#btn');
+  <button class="nav-button prev-button" onclick="previousPage()">
+    <i class="bx bx-chevron-left"></i>
+  </button>
 
-  nightbtn.onclick = function () {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+  <button class="nav-button next-button" onclick="nextPage()">
+    <i class="bx bx-chevron-right"></i>
+  </button>
 
-    var contentMainView = document.getElementById('mainView');
-      if (element.classList.contains('dark-mode')) {
-        contentMainView.style.backgroundColor = 'orangered'; // Dark mode color
+  <script>
+    function applyDarkModePreference() {
+      var element = document.body;
+      var contentMainView = document.getElementById('mainView');
+
+      var darkMode = localStorage.getItem('darkMode');
+
+      if (darkMode === 'enabled' || darkMode === null) {
+        element.classList.add('dark-mode');
+        contentMainView.style.backgroundColor = 'orangered';
       } else {
-        contentMainView.style.backgroundColor = 'orange'; // Light mode color
+        element.classList.remove('dark-mode');
+        contentMainView.style.backgroundColor = 'orange';
       }
-  }
+    }
 
-  window.addEventListener("load", function () {
-    setTimeout(
-      function open(event) {
-        document.querySelector(".wip-popup").style.display = "block";
-        document.querySelector(".wip-background").style.display = "block";
-      },
-      10000000000
-    )
-  });
-</script>
+    window.onload = applyDarkModePreference;
+
+    document.getElementById('nightbtn').onclick = function () {
+      var element = document.body;
+      var contentMainView = document.getElementById('mainView');
+      element.classList.toggle("dark-mode");
+
+      if (element.classList.contains('dark-mode')) {
+        contentMainView.style.backgroundColor = 'orangered';
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        contentMainView.style.backgroundColor = 'orange';
+        localStorage.setItem('darkMode', 'disabled'); 
+      }
+    }
+
+    function previousPage() {
+      window.location.href = 'shollie.html';
+    }
+
+    function nextPage() {
+      window.location.href = 'fishy.html';
+    }
+  </script>
+</body>
 
 </html>

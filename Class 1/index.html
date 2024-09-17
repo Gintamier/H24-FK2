@@ -114,12 +114,34 @@
 </body>
 
 <script>
-  let btn = document.querySelector('#btn');
+    function applyDarkModePreference() {
+      var element = document.body;
+      var contentMainView = document.getElementById('mainView');
 
-  nightbtn.onclick = function () {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
+      var darkMode = localStorage.getItem('darkMode');
+
+      if (darkMode === 'enabled' || darkMode === null) {
+        element.classList.add('dark-mode');
+        contentMainView.style.backgroundColor = 'orangered';
+      } else {
+        element.classList.remove('dark-mode');
+        contentMainView.style.backgroundColor = 'orange';
+      }
+    }
+
+    window.onload = applyDarkModePreference;
+
+    document.getElementById('nightbtn').onclick = function () {
+      var element = document.body;
+      var contentMainView = document.getElementById('mainView');
+      element.classList.toggle("dark-mode");
+
+      if (element.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled'); 
+      }
+    }
 
   window.addEventListener("load", function () {
     setTimeout(

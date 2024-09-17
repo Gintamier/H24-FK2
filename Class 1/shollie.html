@@ -249,30 +249,54 @@
   </section>
 </body>
 
+<button class="nav-button prev-button" onclick="previousPage()">
+  <i class="bx bx-chevron-left"></i>
+</button>
+
+<button class="nav-button next-button" onclick="nextPage()">
+  <i class="bx bx-chevron-right"></i>
+</button>
+
 <script>
-  let btn = document.querySelector('#btn');
+    function applyDarkModePreference() {
+      var element = document.body;
+      var contentMainView = document.getElementById('mainView');
 
-  nightbtn.onclick = function () {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+      var darkMode = localStorage.getItem('darkMode');
 
-    var contentMainView = document.getElementById('mainView');
-      if (element.classList.contains('dark-mode')) {
-        contentMainView.style.backgroundColor = 'darkblue'; // Dark mode color
+      if (darkMode === 'enabled' || darkMode === null) {
+        element.classList.add('dark-mode');
+        contentMainView.style.backgroundColor = 'darkblue';
       } else {
-        contentMainView.style.backgroundColor = 'cyan'; // Light mode color
+        element.classList.remove('dark-mode');
+        contentMainView.style.backgroundColor = 'blue';
       }
+    }
+
+    window.onload = applyDarkModePreference;
+
+    document.getElementById('nightbtn').onclick = function () {
+      var element = document.body;
+      var contentMainView = document.getElementById('mainView');
+      element.classList.toggle("dark-mode");
+
+      if (element.classList.contains('dark-mode')) {
+        contentMainView.style.backgroundColor = 'darkblue';
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        contentMainView.style.backgroundColor = 'blue';
+        localStorage.setItem('darkMode', 'disabled'); 
+      }
+    }
+    // Function to go to the previous page
+    function previousPage() {
+    window.location.href = 'cornsnakes.html'; // Change to your actual previous page URL
   }
 
-  window.addEventListener("load", function () {
-    setTimeout(
-      function open(event) {
-        document.querySelector(".wip-popup").style.display = "block";
-        document.querySelector(".wip-background").style.display = "block";
-      },
-      10000000000
-    )
-  });
+  // Function to go to the next page
+  function nextPage() {
+    window.location.href = 'kitty.html'; // Change to your actual next page URL
+  }
 </script>
 
 </html>

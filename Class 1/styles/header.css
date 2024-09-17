@@ -60,3 +60,35 @@
   color: #007bff; 
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
+
+.nav-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: darkgray;
+}
+
+.nav-button:hover {
+  color: #007bff; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .nav-button {
+  color: white;
+}
+
+.dark-mode .nav-button:hover {
+  color: #007bff; 
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
