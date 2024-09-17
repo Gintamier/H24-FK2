@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTV - Blub blub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/content.css">
+  <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body class="dark-mode">
+
+  <header class="header">
+    <button class="night-button" id="nightbtn">
+      <i class="bx bx-sun"></i>
+    </button>
+    <a href="index.html" class="back-button">
+      <i class="bx bx-arrow-back"></i>
+    </a>
+  </header>
+
+  <div class="wip-popup">
+    <h1>WORK IN PROGRESS</h1>
+    <p>This site is currently under development</p>
+    <p>Please check again at a later date</p>
+  </div>
+
+  <div class="wip-background"></div>
+
+  <section class="main-sections">
+    <div class="content-main-view" id="mainView" style="background-color: green;">
+      <div class="picture-row">
+        <img class="content-thumb" src="assets/animals/blubblub2.webp" alt="">
+      </div>
+      <div class="content-information-grid">
+
+        <div class="content-information">
+          <h1 class="content-name">
+            Ocean flyers
+          </h1>
+          <p class="content-information">
+            Hahaha... fishy go blubblub
+          </p>
+        </div>
+          
+    </div>
+  </section>
+</body>
+
+<script>
+  let btn = document.querySelector('#btn');
+
+  nightbtn.onclick = function () {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+
+    var contentMainView = document.getElementById('mainView');
+      if (element.classList.contains('dark-mode')) {
+        contentMainView.style.backgroundColor = 'green'; // Dark mode color
+      } else {
+        contentMainView.style.backgroundColor = 'greenyellow'; // Light mode color
+      }
+  }
+
+  window.addEventListener("load", function () {
+    setTimeout(
+      function open(event) {
+        document.querySelector(".wip-popup").style.display = "block";
+        document.querySelector(".wip-background").style.display = "block";
+      },
+      10000000000
+    )
+  });
+</script>
+
+</html>

@@ -38,7 +38,7 @@
   <div class="wip-background"></div>
 
   <section class="main-sections">
-    <div class="content-main-view">
+    <div class="content-main-view" id="mainView" style="background-color: darkblue;">
       <div class="picture-row">
         <img class="content-thumb" src="assets/animals/Caesar2.jpg" alt="">
       </div>
@@ -255,6 +255,13 @@
   nightbtn.onclick = function () {
     var element = document.body;
     element.classList.toggle("dark-mode");
+
+    var contentMainView = document.getElementById('mainView');
+      if (element.classList.contains('dark-mode')) {
+        contentMainView.style.backgroundColor = 'darkblue'; // Dark mode color
+      } else {
+        contentMainView.style.backgroundColor = 'cyan'; // Light mode color
+      }
   }
 
   window.addEventListener("load", function () {

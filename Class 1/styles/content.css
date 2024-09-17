@@ -82,6 +82,11 @@ body {
   color: white;
 }
 
+.dark-mode .header-container {
+  background-color: rgb(119, 119, 119);
+  color: white;
+}
+
 .content-preview {
   display: flex;
   flex-direction: column;

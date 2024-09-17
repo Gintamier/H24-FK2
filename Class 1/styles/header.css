@@ -12,6 +12,13 @@
   z-index: 10000;
 }
 
+.header-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Aligns content at the top */
+  height: 100px; /* Adjust height if needed */
+}
+
 .night-button {
   margin-top: 7px;
   margin-right: 20px;

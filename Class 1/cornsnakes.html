@@ -38,7 +38,7 @@
   <div class="wip-background"></div>
 
   <section class="main-sections">
-    <div class="content-main-view">
+    <div class="content-main-view" id="mainView" style="background-color: darkmagenta;">
       <div class="picture-row">
         <img class="content-thumb" src="assets/animals/CornSnake.webp" alt="">
       </div>
@@ -183,6 +183,13 @@
   nightbtn.onclick = function () {
     var element = document.body;
     element.classList.toggle("dark-mode");
+
+    var contentMainView = document.getElementById('mainView');
+      if (element.classList.contains('dark-mode')) {
+        contentMainView.style.backgroundColor = 'darkmagenta'; // Dark mode color
+      } else {
+        contentMainView.style.backgroundColor = 'hotpink'; // Light mode color
+      }
   }
 
   window.addEventListener("load", function () {
