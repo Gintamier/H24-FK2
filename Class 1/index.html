@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTV - Animal Kingdom?
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/content.css">
+  <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body class="dark-mode">
+
+
+  <header class="header">
+    <button class="night-button" id="nightbtn">
+      <i class="bx bx-sun"></i>
+    </button>
+  </header>
+
+
+  <div class="wip-popup">
+    <h1>WORK IN PROGRESS</h1>
+    <p>This site is currently under development</p>
+    <p>Please check again at a later date</p>
+  </div>
+
+  <div class="wip-background"></div>
+
+  <section class="main-content">
+    <div class="content-preview">
+      <div class="thumbnail-row">
+        <img class="content-thumb" src="assets/animals/CornSnake.webp" alt="">
+      </div>
+      <div class="content-info-grid">
+        <div class="content-info">
+          <p class="content-title">
+            <a href="/cornsnakes.html">Corn Snakes</a>
+          </p>
+          <p class="content-info">
+            Taking its name from the corn granaries, which attracted mice and then mouse predators, the corn snake makes
+            an excellent pet snake. It is generally docile, relatively easy to care for, and does not get very large;
+            it's a great choice, especially for beginner snake owners.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-preview">
+      <div class="thumbnail-row">
+        <img class="content-thumb" src="assets/animals/Caesar1.jpg" alt="">
+      </div>
+      <div class="content-info-grid">
+        <div class="content-info">
+          <p class="content-title">
+            <a href="/shollie.html">Shollie (German Shepherd & Border Collie Mix): Info, & Care</a>
+          </p>
+          <p class="content-info">
+            German Shepherd and Border Collie mixes are commonly called Shollies. Shollies are incredibly playful dogs
+            that are protective of their owners and owners’ children. They are well suited to those who love to get out
+            of the house. They prefer to run around outside rather than enjoy a lazy day at home since they can get
+            stir-crazy.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+<script>
+  let btn = document.querySelector('#btn');
+
+  nightbtn.onclick = function () {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+
+  window.addEventListener("load", function () {
+    setTimeout(
+      function open(event) {
+        document.querySelector(".wip-popup").style.display = "block";
+        document.querySelector(".wip-background").style.display = "block";
+      },
+      10000000000
+    )
+  });
+
+
+</script>
+
+</html>
