@@ -118,18 +118,16 @@
 }
 
 .sidebar .nav-item {
-  visibility: hidden;
-}
-
-.dark-mode .nav-item {
-  color: white;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease-out;
 }
 
 
 .sidebar.active .nav-item {
-  transition: all 10s ease;
+  transform: translateX(0);
+  opacity: 1;
   visibility: visible;
-  
 }
 
 .sidebar ul li .tooltip {
