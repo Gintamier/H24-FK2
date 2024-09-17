@@ -83,7 +83,7 @@ body {
 }
 
 .dark-mode .header-container {
-  background-color: rgb(119, 119, 119);
+  background-color: rgba(95, 95, 95, 0.8);
   color: white;
 }
 
