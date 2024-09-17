@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTV - Portfolio
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../../../styles/sidebar.css">
+  <link rel="stylesheet" href="../../../styles/general.css">
+  <link rel="stylesheet" href="../../../styles/header.css">
+  <link rel="stylesheet" href="../../../styles/media.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+
+
+    <header class="header">
+        <button class="night-button" id="nightbtn">
+          <i class="bx bx-sun"></i>
+        </button>
+        <a href="../../../index.html" class="back-button">
+          <i class="bx bx-arrow-back"></i>
+        </a>
+      </header>
+
+  <div class="sidebar">
+    <div class="top">
+      <div class="logo">
+        <i class="bx bxl-codepen"></i>
+        <span>NTV - Portfolio</span>
+      </div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <div class="user">
+      <img src="../../../PFP/Kelvin_pfp.png" alt="me" class="user-img">
+      <div>
+        <p class="bold">Gintamier</p>
+        <p>Admin</p>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#">
+          <i class="bx bxs-grid-alt"></i>
+          <span class="nav-item">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bxs-shopping-bag"></i>
+          <span class="nav-item">Products</span>
+        </a>
+        <span class="tooltip">Products</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-list-check"></i>
+          <span class="nav-item">Categories</span>
+        </a>
+        <span class="tooltip">Categories</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bxs-food-menu"></i>
+          <span class="nav-item">Orders</span>
+        </a>
+        <span class="tooltip">Orders</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-body"></i>
+          <span class="nav-item">Customers</span>
+        </a>
+        <span class="tooltip">Customers</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-location-plus"></i>
+          <span class="nav-item">Shipping</span>
+        </a>
+        <span class="tooltip">Shipping</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-cog"></i>
+          <span class="nav-item">Settings</span>
+        </a>
+        <span class="tooltip">Settings</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-log-out"></i>
+          <span class="nav-item">Logout</span>
+        </a>
+        <span class="tooltip">Logout</span>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+  <div class="header-container">
+    <h1>NTV - Portfolio</h1>
+  </div>
+
+
+  <div class="wip-popup">
+    <h1>WORK IN PROGRESS</h1>
+    <p>This site is currently under development</p>
+    <p>Please check again at a later date</p>
+  </div>
+
+  <section class="main-sections">
+    <div class="content-main-view">
+      <div class="picture-row">
+        <img class="content-thumb" src="shrek.jpg" alt="">
+        <h1 class="content-name">
+            Shrek
+          </h1>
+          <p class="content-title">
+            Swamp Enthusiast | Ogre Extraordinaire
+        </p>
+      </div>
+      <div class="content-main-view">
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> shrek@swampmail.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Location:</strong> Shrek's Swamp, Far Far Away</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Swamp Maintenance</li>
+                <li>Ogre Roaring</li>
+                <li>Onion Layer Analysis</li>
+                <li>Donkey Management</li>
+                <li>Dragon Communication</li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="job">
+                <h3>Swamp Owner</h3>
+                <p>Far Far Away | 2001 - Present</p>
+                <p>Responsible for maintaining the swamp and keeping unwelcome guests away.</p>
+            </div>
+
+            <div class="job">
+                <h3>Hero of Far Far Away</h3>
+                <p>Far Far Away | 2004 - Present</p>
+                <p>Saved Princess Fiona, defeated Lord Farquaad, and rescued the kingdom from multiple threats.</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <p><strong>Degree:</strong> Advanced Swampology</p>
+            <p><strong>Institution:</strong> Ogre Academy, Far Far Away</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>“Ogres are like onions. Onions have layers. Ogres have layers.” – Shrek</p>
+        </footer>
+          
+    </div>
+  </section>
+
+
+</body>
+
+<script>
+
+  let btn = document.querySelector('#btn');
+  let sidebar = document.querySelector('.sidebar');
+
+  btn.onclick = function () {
+    sidebar.classList.toggle('active');
+  }
+
+  function applyDarkModePreference() {
+    var element = document.body;
+    var contentMainView = document.getElementById('mainView');
+
+    var darkMode = localStorage.getItem('darkMode');
+
+    if (darkMode === 'enabled' || darkMode === null) {
+      element.classList.add('dark-mode');
+      contentMainView.style.backgroundColor = 'orangered';
+    } else {
+      element.classList.remove('dark-mode');
+      contentMainView.style.backgroundColor = 'orange';
+    }
+  }
+
+  window.onload = applyDarkModePreference;
+
+  document.getElementById('nightbtn').onclick = function () {
+    var element = document.body;
+    var contentMainView = document.getElementById('mainView');
+    element.classList.toggle("dark-mode");
+
+    if (element.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  }
+
+  window.addEventListener("load", function () {
+    setTimeout(
+      function open(event) {
+        document.querySelector(".wip-popup").style.display = "block";
+        document.querySelector(".wip-background").style.display = "block";
+      },
+      10000000000
+    )
+  });
+
+
+</script>
+
+</html>

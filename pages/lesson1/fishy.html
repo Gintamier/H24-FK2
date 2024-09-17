@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NTV - MewMew</title>
+  <title>NTV - Blub blub</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <link rel="stylesheet" href="styles/sidebar.css">
-  <link rel="stylesheet" href="styles/general.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/content.css">
-  <link rel="stylesheet" href="styles/media.css">
+  <link rel="stylesheet" href="../../styles/general.css">
+  <link rel="stylesheet" href="../../styles/header.css">
+  <link rel="stylesheet" href="../../styles/content.css">
+  <link rel="stylesheet" href="../../styles/media.css">
 </head>
 
 <body class="dark-mode">
@@ -38,34 +37,34 @@
   <div class="wip-background"></div>
 
   <section class="main-sections">
-    <div class="content-main-view" id="mainView" style="background-color: orangered;">
+    <div class="content-main-view" id="mainView" style="background-color: green;">
       <div class="picture-row">
-        <img class="content-thumb" src="assets/animals/mewmew2.avif" alt="">
+        <img class="content-thumb" src="../../assets/lesson1/animals/blubblub2.webp" alt="">
       </div>
       <div class="content-information-grid">
 
         <div class="content-information">
           <h1 class="content-name">
-            Mewmew monsters
+            Ocean flyers
           </h1>
           <p class="content-information">
-            Hahaha... kitty go meow
+            Hahaha... fishy go blubblub
           </p>
         </div>
-
-      </div>
+          
     </div>
   </section>
+</body>
 
-  <button class="nav-button prev-button" onclick="previousPage()">
-    <i class="bx bx-chevron-left"></i>
-  </button>
+<button class="nav-button prev-button" onclick="previousPage()">
+  <i class="bx bx-chevron-left"></i>
+</button>
 
-  <button class="nav-button next-button" onclick="nextPage()">
-    <i class="bx bx-chevron-right"></i>
-  </button>
+<button class="nav-button next-button" onclick="nextPage()">
+  <i class="bx bx-chevron-right"></i>
+</button>
 
-  <script>
+<script>
     function applyDarkModePreference() {
       var element = document.body;
       var contentMainView = document.getElementById('mainView');
@@ -74,10 +73,10 @@
 
       if (darkMode === 'enabled' || darkMode === null) {
         element.classList.add('dark-mode');
-        contentMainView.style.backgroundColor = 'orangered';
+        contentMainView.style.backgroundColor = 'green';
       } else {
         element.classList.remove('dark-mode');
-        contentMainView.style.backgroundColor = 'orange';
+        contentMainView.style.backgroundColor = 'limegreen';
       }
     }
 
@@ -89,22 +88,23 @@
       element.classList.toggle("dark-mode");
 
       if (element.classList.contains('dark-mode')) {
-        contentMainView.style.backgroundColor = 'orangered';
+        contentMainView.style.backgroundColor = 'green';
         localStorage.setItem('darkMode', 'enabled');
       } else {
-        contentMainView.style.backgroundColor = 'orange';
+        contentMainView.style.backgroundColor = 'limegreen';
         localStorage.setItem('darkMode', 'disabled'); 
       }
     }
 
+    
     function previousPage() {
-      window.location.href = 'shollie.html';
-    }
+    window.location.href = 'kitty.html';
+  }
 
-    function nextPage() {
-      window.location.href = 'fishy.html';
-    }
-  </script>
-</body>
+  
+  function nextPage() {
+    window.location.href = 'cornsnakes.html'; 
+  }
+</script>
 
 </html>
