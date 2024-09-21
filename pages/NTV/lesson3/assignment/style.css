@@ -98,22 +98,16 @@
     padding-bottom: 15px;
   }
   
-  .content-view {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: white;
-    transition: all 0.5s ease;
-    min-height: fit-content;
-    padding-bottom: 15px;
-  }
-  
   .dark-mode .content-preview  {
     background-color: rgb(95, 95, 95);
   }
   
   /* -Section Dark Mode- : Line 86, 91, Don't work as single thing, had to duplicate.. dunno why.  */
   .dark-mode .content-main-view  {
+    background-color: rgb(95, 95, 95);
+  }
+
+  .dark-mode .content-main-information  {
     background-color: rgb(95, 95, 95);
   }
   
@@ -128,10 +122,9 @@
   .content-thumb {
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 25%;
-    border-radius: 100%;
-    border: 1px solid #eee;
-    position: static;
+    width: 35%;
+    height: auto;
+    position: relative;
   }
   
   .content-title {
@@ -140,9 +133,9 @@
     margin-left: 3px;
     margin-right: 3px;
     font-size: 15px;
-    font-weight: 500;
     line-height: 20px;
-    text-align: center;
+    text-align: left;
+    width: 85%;
   }
   
   .content-info {
@@ -198,25 +191,54 @@
   
   .content-main-view {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: center;
     border-radius: 10px;
     background-color: white;
     transition: all 0.5s ease;
     padding: 20px;
-    max-width: 1000px;
-    width: 100%;
+    max-width: 2300px;
+    width: 80%;
+    height: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     box-sizing: border-box;
   }
+
+  .content-main-information {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.5s ease;
+    padding: 80px;
+    max-width: 1300px;
+    width: 100%;
+  }
+
   
   
   .content-name {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 50px;
+    font-weight: bolder;
     line-height: 1.2;
-    text-align: center;
+    text-align: left;
+  }
+
+  .content-logo {
+    margin-top: 0;
+    margin-bottom: 10px;
+    left: -100px;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: left;
+    color: rgb(0, 174, 255);
+    position: relative;
+  }
+
+  .dashes {
+    letter-spacing: -2px;
   }
   
   
@@ -248,7 +270,6 @@
 
  h2 {
     margin-top: 15px;
-    background-color: #ff5722;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -260,6 +281,11 @@
     border-radius: 5px;
     position: relative;
     font-weight: bold;
+  }
+  
+  ul {
+    padding-left: 5%;
+    line-height: 35px;
   }
 
 
@@ -277,6 +303,46 @@
 
   .dark-mode .footer {
     color: rgb(95, 95, 95);
+  }
+
+  .button {
+    display: flex;
+    flex: row;
+    padding-top: 5%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .button1 {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline-style: solid;
+    outline-color: rgb(0, 174, 255);
+    outline-width: 3px;
+    margin-right: 5%;
+    padding: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+    color: rgb(0, 174, 255);
+    border-width: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .button2 {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(0, 174, 255);
+    color: white;
+    border-width: 20px;
+    font-size: 20px;
+    font-weight: bold;
   }
 
 
