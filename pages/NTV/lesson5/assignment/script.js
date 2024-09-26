@@ -96,6 +96,7 @@ function countBombsAround(row, col) {
 
 // Recursively reveal all empty cells around a cell with no bombs
 function revealEmptyCells(row, col) {
+  const revealEmptyCells = gameBoard[row][col];
 
 }
 
