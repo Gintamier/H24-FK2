@@ -28,7 +28,7 @@ const complexWizards = [
     { name: "Hermione", hair: "brown" },
 ]
 
-const renderAllWizards = (complexWizards) => {
+const renderAllWizards = (Wizards) => {
     // ... do something to generate the three wizards within an un ordered list
     const div = document.createElement('div');
 
@@ -44,18 +44,9 @@ const renderAllWizards = (complexWizards) => {
 
         const listInnerBody = document.createElement('li');
         listInnerBody.innerText = complexWizards[i].name;
-        listInnerBody.color = complexWizards[i].hair;
+        listInnerBody.style.color = complexWizards[i].hair;
         listBody.appendChild(listInnerBody);
     }
-
-    for (i = 0; i < complexWizards.length; ++i) {
-
-
-        const listInnerBodyStyle = document.createElement('style');
-        listInnerBodyStyle.color = complexWizards[i].hair;
-        listBody.appendChild(listInnerBodyStyle);
-    }
-
 
 }
 renderAllWizards(complexWizards)
