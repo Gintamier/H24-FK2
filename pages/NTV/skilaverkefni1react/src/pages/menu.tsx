@@ -1,6 +1,7 @@
 import React from "react";
 import FoodItem from "@/components/FoodItem";
 import Navbar from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const menuItems = [
   { name: "Home", link: "./" },
@@ -92,16 +93,19 @@ function App() {
   ];
 
   return (
-    <div className="bg-[#f4f0e3] h-full flex flex-wrap justify-center space-x-4 space-y-4">
+    <div className="bg-[#f4f0e3] min-h-screen flex flex-col">
       <Navbar menuItems={menuItems} />
-      {foodData.map((item, index) => (
-        <FoodItem
-          key={index}
-          image={item.image}
-          name={item.name}
-          description={item.description}
-        />
-      ))}
+      <div className="flex-grow flex-wrap flex justify-center gap-4 p-4">
+        {foodData.map((item, index) => (
+          <FoodItem
+            key={index}
+            image={item.image}
+            name={item.name}
+            description={item.description}
+          />
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 }

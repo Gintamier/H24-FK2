@@ -19,12 +19,13 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-8 bg-white rounded shadow-md text-gray-700">
-      <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+    <div className="max-w-lg mx-auto p-8 bg-[#f4f0e3] rounded shadow-md">
+      <h2 className="text-2xl font-bold mb-4 text-center text-[#416d79]">
+        Contact Us
+      </h2>
       <form className="space-y-4">
-        {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-gray-700">
+          <label htmlFor="name" className="block text-[#805a51]">
             Name
           </label>
           <input
@@ -34,13 +35,12 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full mt-1 p-2 border rounded text-gray-700"
+            className="bg-white w-full mt-1 p-2 border border-[#805a51] rounded text-[#416d79] focus:outline-none focus:border-[#d4a83f] focus:ring-1 focus:ring-[#d4a83f]"
           />
         </div>
 
-        {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-gray-700">
+          <label htmlFor="email" className="block text-[#805a51]">
             Email
           </label>
           <input
@@ -50,13 +50,12 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full mt-1 p-2 border rounded text-gray-700"
+            className="bg-white w-full mt-1 p-2 border border-[#805a51] rounded text-[#416d79] focus:outline-none focus:border-[#d4a83f] focus:ring-1 focus:ring-[#d4a83f]"
           />
         </div>
 
-        {/* Dropdown */}
         <div>
-          <label htmlFor="subject" className="block text-gray-700">
+          <label htmlFor="subject" className="block text-[#805a51]">
             Subject
           </label>
           <select
@@ -64,7 +63,7 @@ export default function ContactForm() {
             name="subject"
             value={formData.subject}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded text-gray-700"
+            className="bg-white w-full mt-1 p-2 border border-[#805a51] rounded text-[#416d79] focus:outline-none focus:border-[#d4a83f] focus:ring-1 focus:ring-[#d4a83f]"
           >
             <option value="General Request">General Request</option>
             <option value="Restaurants">Restaurants</option>
@@ -72,9 +71,8 @@ export default function ContactForm() {
           </select>
         </div>
 
-        {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-gray-700">
+          <label htmlFor="message" className="block text-[#805a51]">
             Message
           </label>
           <textarea
@@ -83,16 +81,15 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleInputChange}
             required
-            className="w-full mt-1 p-2 border rounded text-gray-700"
+            className="bg-white w-full mt-1 p-2 border border-[#805a51] rounded text-[#416d79] focus:outline-none focus:border-[#d4a83f] focus:ring-1 focus:ring-[#d4a83f]"
             rows="4"
           />
         </div>
 
-        {/* Submit button */}
         <div className="text-center">
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-[#805a51] text-white rounded hover:bg-[#90685e] transition-all duration-300 ease-in-out"
           >
             Submit
           </button>
